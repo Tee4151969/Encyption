@@ -1,7 +1,10 @@
 import sys
 import string
 import csv
+from np import numpy
+from pd import pandas
 from cryptography.fernet import Fernet
+
 filename =sys.argv[1] #"c6c44c0c-fd9f-42d2-a773-9668328958fd.config"
 filenamecsv = filename.replace(".config",".csv")
 

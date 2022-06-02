@@ -10,7 +10,7 @@ def randomValue(Text):
     Textlower=string.ascii_lowercase
     Textupper=string.ascii_uppercase
     Textnumber ="0123456789"
-
+    TextThai = "กขฃคฅฆงจฉชซฌญฎฏฐฑฒณดตถทธนบปผฝพฟภมยรลวศษสหฬอฮ"
     for elem in Text:
         if elem.isupper():
             TextResult += (random.choice(Textupper.replace(elem,"")))
@@ -18,6 +18,8 @@ def randomValue(Text):
             TextResult += (random.choice(Textlower.replace(elem,"")))
         elif elem.isnumeric():
             TextResult += (random.choice(Textnumber.replace(elem,"")))
+        elif (str(elem).find(TextThai)> -1):
+            TextResult += (random.choice(TextThai.replace(elem, "")))
         else:
             TextResult += elem
     return TextResult
